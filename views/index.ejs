@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de jugadores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido al juego de Dados!</h1>
+        <img src="https://blogs.unsw.edu.au/nowideas/files/2018/08/dados.jpg" alt="Dados">
+        <h3>Cada jugador tiene un lanzamiento, aquel que obtenga el número mayor, gana!</h3>
+        <form action="/postedGameForm" method="POST">
+            <div class="form-group">
+                <label for="jugador1" class="form-label">Jugador 1</label>
+                <input type="text" class="form-control" name="jugador1" id="jugador1" placeholder="Ingrese su nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="jugador2" class="form-label">Jugador 2</label>
+                <input type="text" class="form-control" name="jugador2" id="jugador2" placeholder="Ingrese su nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="jugador3" class="form-label">Jugador 3</label>
+                <input type="text" class="form-control" name="jugador3" id="jugador3" placeholder="Ingrese su nombre" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Empezar Juego</button>
+        </form>
+        <form action="/createGame" method="POST">
+            <button type="submit" class="btn btn-primary">POST request de creación de juego</button>
+        </form>
+        <form action="/startGame" method="POST">
+            <button type="submit" class="btn btn-primary">POST request para iniciar el juego con la apuesta por cada jugador</button>
+        </form>
+    </div>
+</body>
+</html>
